@@ -46,6 +46,7 @@ always be lowercase as shown below.
 
 - backend
 - frontend
+- database
 - config
 - anything else (whatever you like, but keep it short)
 
