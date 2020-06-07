@@ -73,3 +73,7 @@ A Foster-Parent User can ...
 # GDR Client
 
 Not yet implemented.
+
+# Resources Used
+
+1. [Tables Generator - Markdown](https://www.tablesgenerator.com/markdown_tables)
