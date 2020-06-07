@@ -1,5 +1,26 @@
 # Good Dog Radar - Dev Notes
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Good Dog Radar - Dev Notes](#good-dog-radar-dev-notes)
+  - [Overview](#overview)
+  - [User Stories](#user-stories)
+- [GDR Server](#gdr-server)
+  - [Models](#models)
+    - [Pet](#pet)
+    - [Organization](#organization)
+    - [Comment](#comment)
+    - [Medication](#medication)
+    - [User](#user)
+- [GDR Client](#gdr-client)
+- [Resources Used](#resources-used)
+
+<!-- /code_chunk_output -->
+
+---
+
 ## Overview
 
 This app will allow a user to keep track of dogs within an organization (dog rescue, animal shelter, boarding facility, etc).
