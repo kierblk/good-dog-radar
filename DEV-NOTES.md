@@ -29,6 +29,7 @@ This app will allow a user to keep track of dogs within an organization (dog res
 
 An Admin User can ...
 
+- sign up and log in
 - create an oranization
 - add a pet to their organization
 - see a list of all pets within their organizaton
@@ -39,6 +40,7 @@ An Admin User can ...
 
 A Foster-Parent User can ...
 
+- sign up and log in
 - join an organization
 - edit pets they are assigned within their organization
 - see a list of all pets within their organization
@@ -55,9 +57,9 @@ A Foster-Parent User can ...
 
 `rails g resource Pet organization_id:integer user_id:integer name:string breed:string birthdate:date photo:string --no-test-framework`
 
-| Relationships                                                      | Attributes                                                                                                                                                              |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| belongs_to :organization<br>belongs_to :user<br>has_many :comments | :organization_id - reference<br>:user_id - reference<br>:name - string<br>:breed - string<br>:birthdate - datetime<br>:photo - string (URL for now)<br>:admin - boolean |
+| Relationships                                                      | Attributes                                                                                                                                          |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| belongs_to :organization<br>belongs_to :user<br>has_many :comments | :organization_id - reference<br>:user_id - reference<br>:name - string<br>:breed - string<br>:birthdate - datetime<br>:photo - string (URL for now) |
 
 ### Organization
 
@@ -87,9 +89,9 @@ A Foster-Parent User can ...
 
 `rails g resource User organization_id:integer name:string email:string phone:string --no-test-framework`
 
-| Relationships                                                    | Attributes                                                                                                                                                     |
-| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| has_many :pets<br>belongs_to :organization<br>has_many :comments | :organization_id - reference<br>:name - string<br>:email - string<br>:phone - string<br><br>To be added later:<br><br>:username - string<br>:password - string |
+| Relationships                                                    | Attributes                                                                                                                                                                         |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| has_many :pets<br>belongs_to :organization<br>has_many :comments | :organization_id - reference<br>:name - string<br>:email - string<br>:phone - string<br>:admin - boolean<br><br>To be added later:<br><br>:username - string<br>:password - string |
 
 # GDR Client
 
