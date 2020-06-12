@@ -101,3 +101,5 @@ Not yet implemented.
 
 1. [Tables Generator - Markdown](https://www.tablesgenerator.com/markdown_tables)
 2. [Heroku - Good Dog Radar](https://good-dog-radar.herokuapp.com/)
+3. [Fast JSON API Serializer](https://github.com/Netflix/fast_jsonapi)
+4. [Rails HTTP Status Codes](https://gist.github.com/mlanett/a31c340b132ddefa9cca)
