@@ -105,12 +105,8 @@ Not yet implemented.
 3. [Fast JSON API Serializer](https://github.com/Netflix/fast_jsonapi)
 4. [Rails HTTP Status Codes](https://gist.github.com/mlanett/a31c340b132ddefa9cca)
 5. [Freepik Vector 1](https://www.freepik.com/free-vector/abstract-colorful-flow-shapes-background_5226074.htm)
-
-```HTML
-  <a href='https://www.freepik.com/free-photos-vectors/background'>Background vector created by freepik - www.freepik.com</a>
-```
-
 6. [Freepik Vector 2](https://www.freepik.com/free-vector/colourful-sizes-gradient-squares-background-with-copy-space_6299329.htm)
+7. [TinEye - Color Extraction](https://labs.tineye.com/color/)
 
 ## Color Palettes
 
