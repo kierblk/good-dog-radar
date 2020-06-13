@@ -16,6 +16,7 @@
     - [User](#user)
 - [GDR Client](#gdr-client)
 - [Resources Used](#resources-used)
+  - [Color Palettes](#color-palettes)
 
 <!-- /code_chunk_output -->
 
@@ -103,3 +104,61 @@ Not yet implemented.
 2. [Heroku - Good Dog Radar](https://good-dog-radar.herokuapp.com/)
 3. [Fast JSON API Serializer](https://github.com/Netflix/fast_jsonapi)
 4. [Rails HTTP Status Codes](https://gist.github.com/mlanett/a31c340b132ddefa9cca)
+5. [Freepik Vector 1](https://www.freepik.com/free-vector/abstract-colorful-flow-shapes-background_5226074.htm)
+6. [Freepik Vector 2](https://www.freepik.com/free-vector/colourful-sizes-gradient-squares-background-with-copy-space_6299329.htm)
+7. [TinEye - Color Extraction](https://labs.tineye.com/color/)
+
+## Color Palettes
+
+1. [Colors.lol - Flattest](https://colors.lol/flattest)
+
+- #42B395
+- #044A05
+- #BDF8A3
+
+2. [Colors.lol - Arced](https://colors.lol/arced)
+
+- #017374
+- #D0FEFE
+- #1F3B4D
+
+3. Random on [Colormind.io](colormind.io)
+
+- #f4f6f7
+- #c96e77
+- #676277
+- #80888b
+- #261b31
+
+4. Random on [Colormind.io](colormind.io)
+
+- #f4f6f7
+- #c7c15f
+- #9b9cac
+- #85838c
+- #3c3c48
+
+5. From Freepik - Abstract Colorful Flow
+
+- #FBBE8C - LIGHT SALMON
+- #E1E25F - KHAKI
+- #44AFBF - STEEL BLUE
+- #934ED5 - DARK ORCHID
+- #CE89B7 - PLUM
+
+6. Second Generated Palatte from Freepik Abstract Colorful Flow
+
+- Background color
+  - #F4E1EF
+- Purple Shape
+  - #8A62DC
+  - #749AED
+- Yellow-Green Shape
+  - #DCEC5C
+  - #4FCF9C
+  - #8BDAD9
+  - #55DA73
+  - #F5F5C6
+- Pink-Orange Shape
+  - #E989A5
+  - #FCB884
