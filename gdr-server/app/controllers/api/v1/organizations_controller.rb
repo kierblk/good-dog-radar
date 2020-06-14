@@ -4,8 +4,10 @@ class Api::V1::OrganizationsController < ApplicationController
   # GET /organizations
   def index
     @organizations = Organization.all
+    # json_string = MovieSerializer.new(movie).serialized_json
+    organizations_json = OrganizationSerializer.new(@organizations).serialized_json
 
-    render json: @organizations
+    render json: organizations_json
   end
 
   # GET /organizations/1
