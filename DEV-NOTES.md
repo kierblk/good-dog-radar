@@ -162,3 +162,19 @@ Not yet implemented.
 - Pink-Orange Shape
   - #E989A5
   - #FCB884
+
+7. CSS Gradient Background Colors
+
+- #845EC2
+- #D65DB1
+- #FF6F91
+- #FF9671
+- #FFC75F
+- #F9F871
+
+8. CSS Gradient Backgroun Colors 2
+
+- #B0A8B9
+- #FF6F91
+- #005893
+- #7FD1AE
