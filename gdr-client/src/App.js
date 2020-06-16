@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import Login from './components/Login'
-import Logout from './components/Logout'
 import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
+import NavBar from "./components/NavBar";
+import PetList from "./components/PetList";
+import ActivityFeed from "./components/ActivityFeed";
+import ActivityForm from "./components/ActivityForm";
 
 class App extends React.Component {
 
@@ -14,19 +16,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          { this.props.currentUser ? <Logout /> : <Login /> }
-    {/* <Logout /> */}
-        </header>
+        <NavBar />
+        <div className="gdr">
+          <PetList />
+          <ActivityFeed />
+          <ActivityForm />
+        </div>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({ currentUser }) => {
-  return {
-    currentUser
-  }
-}
 
-export default connect(mapStateToProps, { getCurrentUser })(App);
+
+export default connect( null, { getCurrentUser })(App);
