@@ -2,18 +2,18 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,17 +22,69 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+.gdr {
+  display: -webkit-box;
+  display: flex;
+  height: 90vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.gdr > * {
+  -webkit-box-flex: 1;
+          flex: 1 4 auto;
+  padding: 2rem;
+  border: 1rem double #1a1a1a;
+  position: relative;
+  background: rgba(255,255,255,0.8);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+  overflow: scroll;
+}
+.gdr > *:first-child {
+  flex-shrink: 1;
+  flex-basis: 50%;
+  /* -webkit-transform: translateX(50%) rotateY(6deg) translateX(-50%); */
+          /* transform: translateX(50%) rotateY(6deg) translateX(-50%); */
+}
+.gdr > *:nth-child(2) {
+  /* -webkit-transform: translateX(-50%) rotateY(-14deg) translateX(50%); */
+          /* transform: translateX(-50%) rotateY(-14deg) translateX(50%); */
+  border-left: 0;
+  border-right: 0;
+  min-width: 300px;
+}
+.gdr > *:last-child {
+  flex-shrink: 1;
+  flex-basis: 50%;
+  /* -webkit-transform: translateX(-50%) rotateY(10deg) translateX(50%) scale(1.08) translateX(24px); */
+          /* transform: translateX(-50%) rotateY(10deg) translateX(50%) scale(1.08) translateX(24px); */
+}
+
+.navbar {
+  display: block;
+}
+
+h3 {
+  color: #FFFFFF;
 }
