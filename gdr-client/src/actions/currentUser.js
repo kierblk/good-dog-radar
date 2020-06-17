@@ -1,3 +1,5 @@
+import { resetLoginForm } from './loginForm'
+
 /* 
   Syncronous Action Creators
 */
@@ -34,10 +36,11 @@ export const login = (credentials) => {
     .then(user => {
       if (user.error) {
         alert(user.error)
-      } else (
-        dispatch(setCurrentUser(user))
-      )
-    })
+      } else {
+        dispatch(setCurrentUser(user.data))
+        dispatch(resetLoginForm())
+    }
+  })
     // .catch()
   }
 }
@@ -66,10 +69,10 @@ export const getCurrentUser = () => {
     .then(user => {
       if (user.error) {
         alert(user.error)
-      } else (
-        dispatch(setCurrentUser(user))
-      )
-    })
+      } else {
+        dispatch(setCurrentUser(user.data))
+    }
+  })
     // .catch()
   }
 }
