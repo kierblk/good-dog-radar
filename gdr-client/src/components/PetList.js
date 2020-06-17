@@ -1,11 +1,22 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import Pet from './Pet'
 
-const PetList = () => {
+const PetList = (props) => {
+  const myPets = props.pets.map(pet => <Pet pet={pet} key={pet.id} />)
   return (
   <div className="PetList">
-    A list of pets here.
+    Your Fosters:
+    { myPets }
   </div>
   )
 }
 
-export default PetList
+const mapStateToProps = state => {
+  return {
+    pets : state.myPets
+  }
+}
+
+export default connect(mapStateToProps)(PetList)
+
