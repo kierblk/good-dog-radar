@@ -81,10 +81,7 @@
           /* transform: translateX(-50%) rotateY(10deg) translateX(50%) scale(1.08) translateX(24px); */
 }
 
-.navbar {
-  display: block;
-}
-
-h3 {
+.text-white {
   color: #FFFFFF;
 }
+
