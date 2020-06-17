@@ -1,5 +1,5 @@
 import { resetLoginForm } from './loginForm'
-
+import { getMyPets } from './myPets'
 /* 
   Syncronous Action Creators
 */
@@ -39,6 +39,7 @@ export const login = (credentials) => {
       } else {
         dispatch(setCurrentUser(user.data))
         dispatch(resetLoginForm())
+        dispatch(getMyPets())
     }
   })
     // .catch()
@@ -71,8 +72,9 @@ export const getCurrentUser = () => {
         alert(user.error)
       } else {
         dispatch(setCurrentUser(user.data))
-    }
-  })
+        dispatch(getMyPets())
+      }
+    })
     // .catch()
   }
 }
