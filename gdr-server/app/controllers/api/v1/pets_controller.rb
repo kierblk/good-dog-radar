@@ -3,11 +3,14 @@ class Api::V1::PetsController < ApplicationController
   
   # GET /pets
   def index
-    @pets = Pet.all
-
-    render json: @pets
-
-    # render plain: "Hello"
+    if logged_in?
+      @pets = current_user.pets
+      render json: PetSerializer.new(@pets)
+    else
+      render json: {
+        error: "You must be logged in to see pets."
+      }
+    end 
   end
 
   # GET /pets/1
