@@ -1,6 +1,7 @@
 class UserSerializer
   include FastJsonapi::ObjectSerializer
   attributes :username, :name, :email, :phone, :admin
+  has_many :pets, serializer: PetSerializer
   attribute :org_info do |user| 
     {
       name: user.organization.name,
