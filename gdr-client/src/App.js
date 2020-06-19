@@ -1,13 +1,20 @@
 import React from 'react';
-import './App.css';
 import { connect } from 'react-redux'
-import { getCurrentUser } from './actions/currentUser'
-import NavBar from "./components/NavBar";
-import PetList from "./components/PetList";
-import Login from './components/Login'
-import Signup from './components/Signup'
 import { Route, Switch } from 'react-router-dom'
-import Home from './components/Home'
+
+import './App.css';
+
+import { getCurrentUser } from './actions/currentUser'
+
+import NavBar from "./components/layout/NavBar";
+import Home from './components/layout/Home'
+
+import PetList from "./components/pet/PetList";
+import NewPet from './components/pet/NewPetForm'
+
+import Login from './components/user/Login'
+import Signup from './components/user/Signup'
+
 
 class App extends React.Component {
 
@@ -26,6 +33,7 @@ class App extends React.Component {
             <Route exact path='/login' component={ Login } />
             <Route exact path='/signup' component={ Signup } />
             <Route exact path='/pets' component={ PetList } />
+            <Route exact path='/pets/new' component={ NewPet } />
           </Switch>
         </div>
       </div>

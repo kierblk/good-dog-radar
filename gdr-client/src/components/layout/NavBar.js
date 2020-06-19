@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Logout from './Logout'
+import Logout from '../user/Logout'
 
 const NavBar = ({currentUser}) => {
   return (
