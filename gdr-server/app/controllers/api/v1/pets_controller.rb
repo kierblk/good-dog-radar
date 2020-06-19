@@ -30,18 +30,18 @@ class Api::V1::PetsController < ApplicationController
   end
 
   # PATCH/PUT /pets/1
-  def update
-    if @pet.update(pet_params)
-      render json: @pet
-    else
-      render json: @pet.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @pet.update(pet_params)
+  #     render json: @pet
+  #   else
+  #     render json: @pet.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /pets/1
-  def destroy
-    @pet.destroy
-  end
+  # def destroy
+  #   @pet.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
