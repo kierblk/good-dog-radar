@@ -1,6 +1,6 @@
 import { resetLoginForm } from './loginForm'
 import { resetSignupForm } from "./signupForm.js"
-import { getMyPets } from './myPets'
+import { getMyPets, clearPets } from './myPets'
 /* 
   Syncronous Action Creators
 */
@@ -52,6 +52,7 @@ export const logout = (event) => {
   console.log('Now logging out...')
   return dispatch => {
     dispatch(clearCurrentUser())
+    dispatch(clearPets())
     return fetch('http://localhost:3001/api/v1/logout', {
       credentials: 'include',
       method: 'DELETE'
