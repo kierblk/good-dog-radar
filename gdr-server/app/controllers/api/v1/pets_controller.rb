@@ -4,7 +4,8 @@ class Api::V1::PetsController < ApplicationController
   # GET /pets
   def index
     if logged_in?
-      @pets = current_user.pets
+      # @pets = current_user.pets
+      @pets = Pet.all
       render json: PetSerializer.new(@pets)
     else
       render json: {
@@ -21,9 +22,11 @@ class Api::V1::PetsController < ApplicationController
   # POST /pets
   def create
     @pet = Pet.new(pet_params)
+    @pet.organization_id = current_user.organization_id
+    @pet.user_id = current_user.id
 
     if @pet.save
-      render json: @pet, status: :created, location: @pet
+      render json: @pet, status: :created
     else
       render json: @pet.errors, status: :unprocessable_entity
     end

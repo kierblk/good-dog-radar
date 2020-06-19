@@ -5,6 +5,12 @@ export const setMyPets = pets => {
   }
 }
 
+export const clearPets = () => {
+  return {
+    type: 'CLEAR_PETS'
+  }
+}
+
 export const getMyPets = () => {
   return dispatch => {
     return fetch('http://localhost:3001/api/v1/pets', {
