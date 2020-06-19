@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import Logout from '../user/Logout'
 
 const NavBar = ({currentUser}) => {
@@ -7,7 +8,7 @@ const NavBar = ({currentUser}) => {
     <div className="navbar">
       { 
       currentUser ? 
-      <h1 className="text-white">{currentUser.attributes.org_info.name}</h1> :
+      <h2 className="text-white">{currentUser.attributes.org_info.name}</h2> :
       '' 
       }
 
@@ -26,6 +27,12 @@ const NavBar = ({currentUser}) => {
         </> : 
         '' 
         }
+      </div>
+
+      <div className="navbar-links">
+        { currentUser ? <NavLink exact activeClass to="/">Home</NavLink> : '' }
+        { currentUser ? <NavLink exact activeClass to="/pets">All Pets</NavLink> : '' }
+        { currentUser ? <NavLink exact activeClass to="/pets/new">Add a Pet</NavLink> : '' }
       </div>
     </div>
   )
