@@ -4,8 +4,10 @@ import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
 import NavBar from "./components/NavBar";
 import PetList from "./components/PetList";
-import ActivityFeed from "./components/ActivityFeed";
-import ActivityForm from "./components/ActivityForm";
+import Login from './components/Login'
+import Signup from './components/Signup'
+import { Route, Switch } from 'react-router-dom'
+import Home from './components/Home'
 
 class App extends React.Component {
 
@@ -14,19 +16,29 @@ class App extends React.Component {
   }
 
   render() {
+    const { loggedIn } = this.props
     return (
       <div className="App">
         <NavBar />
-        <div className="gdr">
-          <PetList />
-          <ActivityFeed />
-          <ActivityForm />
+        <div className="gdr App-header">
+          <Switch>
+            <Route exact path='/' render={ () => loggedIn ? <PetList /> : <Home /> } />
+            <Route exact path='/login' component={ Login } />
+            <Route exact path='/signup' component={ Signup } />
+            <Route exact path='/pets' component={ PetList } />
+          </Switch>
         </div>
       </div>
     )
   }
 }
 
+const mapStateToProps = state => {
+  return ({
+    loggedIn: !!state.currentUser
+  })
+}
 
 
-export default connect( null, { getCurrentUser })(App);
+
+export default connect( mapStateToProps, { getCurrentUser })(App);
