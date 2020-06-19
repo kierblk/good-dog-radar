@@ -6,7 +6,6 @@ const PetList = (props) => {
   const myPets = props.pets.map(pet => <Pet pet={pet} key={pet.id} />)
   return (
   <div className="PetList">
-    Your Fosters:
     { myPets }
   </div>
   )
