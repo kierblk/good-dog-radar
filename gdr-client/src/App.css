@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,5 +57,11 @@ a.active {
 
 .text-white {
   color: #FFFFFF;
+}
+
+.header-logo {
+  font-family: 'Gamja Flower', cursive;
+  color: #61dafb;
+  font-size: calc(60px + 2vmin);
 }
 
