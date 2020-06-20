@@ -2,7 +2,9 @@ import React from 'react'
 
 const Pet = ({ pet }) => {
   return (
-    <p>{pet.attributes.name}</p>
+    <div className="Pet">
+      {pet.attributes.name}
+    </div>
   )
 }
 
