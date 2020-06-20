@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 
 import './App.css';
 
@@ -29,7 +29,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <NavBar />
+        <NavBar location={this.props.location} />
         <div className="gdr App-header">
           <Switch>
             <Route exact path='/' render={ () => loggedIn ? '' : <Home /> } />
@@ -53,4 +53,4 @@ const mapStateToProps = state => {
 
 
 
-export default connect( mapStateToProps, { getCurrentUser })(App);
+export default withRouter(connect( mapStateToProps, { getCurrentUser })(App));
