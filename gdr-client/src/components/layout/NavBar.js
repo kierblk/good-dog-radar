@@ -31,7 +31,7 @@ const NavBar = ({currentUser}) => {
 
       <div className="navbar-links">
         { currentUser ? <NavLink exact activeClassName="active" to="/">Home</NavLink> : '' }
-        { currentUser ? <NavLink exact activeClassName="active" to="/pets">All Pets</NavLink> : '' }
+        { currentUser ? <NavLink exact activeClassName="active" to="/pets">Your Pets</NavLink> : '' }
         { currentUser ? <NavLink exact activeClassName="active" to="/pets/new">Add a Pet</NavLink> : '' }
       </div>
     </div>
