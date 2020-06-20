@@ -30,9 +30,9 @@ const NavBar = ({currentUser}) => {
       </div>
 
       <div className="navbar-links">
-        { currentUser ? <NavLink exact activeClass to="/">Home</NavLink> : '' }
-        { currentUser ? <NavLink exact activeClass to="/pets">All Pets</NavLink> : '' }
-        { currentUser ? <NavLink exact activeClass to="/pets/new">Add a Pet</NavLink> : '' }
+        { currentUser ? <NavLink exact activeClassName="active" to="/">Home</NavLink> : '' }
+        { currentUser ? <NavLink exact activeClassName="active" to="/pets">All Pets</NavLink> : '' }
+        { currentUser ? <NavLink exact activeClassName="active" to="/pets/new">Add a Pet</NavLink> : '' }
       </div>
     </div>
   )
