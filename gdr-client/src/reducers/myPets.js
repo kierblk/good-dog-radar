@@ -7,7 +7,6 @@ export default (state = initialState, action) => {
     case 'CLEAR_PETS':
       return initialState
       case "ADD_PET":
-        console.log(action.pet)
         return state.concat(action.pet)
     default: 
       return state
