@@ -1,8 +1,8 @@
 // synchronous action creators
-export const updateNewPetForm = (name, value) => {
+export const updateNewPetForm = formData => {
   return {
     type: "UPDATE_NEW_PET_FORM",
-    formData: { name, value }
+    formData
   }
 }
 
