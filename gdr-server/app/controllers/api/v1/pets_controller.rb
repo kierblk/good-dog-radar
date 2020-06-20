@@ -4,8 +4,8 @@ class Api::V1::PetsController < ApplicationController
   # GET /pets
   def index
     if logged_in?
-      # @pets = current_user.pets
-      @pets = Pet.all
+      @pets = current_user.pets.sort_by(&:name)
+      # @pets = Pet.all
       render json: PetSerializer.new(@pets)
     else
       render json: {
@@ -15,9 +15,9 @@ class Api::V1::PetsController < ApplicationController
   end
 
   # GET /pets/1
-  def show
-    render json: @pet
-  end
+  # def show
+  #   render json: @pet
+  # end
 
   # POST /pets
   def create
