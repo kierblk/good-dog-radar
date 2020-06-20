@@ -26,7 +26,7 @@ class Api::V1::PetsController < ApplicationController
     @pet.user_id = current_user.id
 
     if @pet.save
-      render json: @pet, status: :created
+      render json: PetSerializer.new(@pet)
     else
       render json: @pet.errors, status: :unprocessable_entity
     end
