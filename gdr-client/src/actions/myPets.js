@@ -58,7 +58,7 @@ export const createPet = (petData, history) => {
       } else {
         dispatch(addPet(pet.data))
         dispatch(resetNewPetForm())
-        history.push('/pets/${pet.data.id}')
+        history.push(`/pets/${pet.data.id}`)
       }
     })
     .catch(console.log)
