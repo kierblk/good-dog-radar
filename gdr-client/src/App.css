@@ -65,3 +65,18 @@ a.active {
   font-size: calc(60px + 2vmin);
 }
 
+.PetList {
+  display: flex;
+  align-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Pet {
+  margin: 5px;
+  padding: 20px 35px;
+  background: #7e7d7d;
+  /* border: 1px solid #FF6F91; */
+}
+
