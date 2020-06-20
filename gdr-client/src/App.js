@@ -11,8 +11,9 @@ import Home from './components/layout/Home'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 
-import PetList from "./components/pet/PetList";
+import PetList from "./components/pet/PetList"
 import NewPet from './components/pet/NewPetForm'
+import PetCard from './components/pet/PetCard'
 
 import Login from './components/user/Login'
 import Signup from './components/user/Signup'
@@ -25,7 +26,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { loggedIn } = this.props
+    const { loggedIn, pets } = this.props
     return (
       <div className="App">
         <Header />
@@ -37,6 +38,11 @@ class App extends React.Component {
             <Route exact path='/signup' component={ Signup } />
             <Route exact path='/pets' component={ PetList } />
             <Route exact path='/pets/new' component={ NewPet } />
+            <Route exact path='/pets/:id' render={ props => { 
+                const pet = pets.find(pet => pet.id === props.match.params.id)
+                return <PetCard pet={pet} {...props} />
+              }
+              }/>
           </Switch>
         </div>
         <Footer />
@@ -47,7 +53,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return ({
-    loggedIn: !!state.currentUser
+    loggedIn: !!state.currentUser,
+    pets: state.myPets
   })
 }
 
