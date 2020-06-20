@@ -43,7 +43,7 @@ const NewPetForm = ({formData, updateNewPetForm, createPet, history}) => {
           name="birthdate" 
           onChange={handleChange} 
           value={formData.birthdate} 
-          placeholder="YYYY-MM-DD" />
+          placeholder="MM-DD-YYYY" />
         <br />
         <input 
           type="text" 
