@@ -45,13 +45,21 @@
 .navbar-links {
   display: flex;
   justify-content: space-evenly;
+  background: #3f4653;
+  min-height: 5vh;
+  align-items: center;
 }
 
-a {
+a, a:visited{
   color: #61dafb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: limegreen
 }
 
-a.active {
+a:active, a.active {
   color: limegreen
 }
 
@@ -74,9 +82,52 @@ a.active {
 }
 
 .Pet {
+  display: flex;
   margin: 5px;
   padding: 20px 35px;
+  border-radius: 25px;
   background: #7e7d7d;
+  align-items: center;
   /* border: 1px solid #FF6F91; */
 }
 
+.Pet img {
+  width: 50px
+}
+
+.PetCard img {
+  width: 300px;
+  height: auto;
+  border: 2px solid #FF6F91
+}
+
+.PetCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.pet-photo {
+  margin: 5px;
+  padding: 20px;
+}
+
+.pet-info {
+  margin: 5px;
+  padding: 20px;
+}
+
+.pet-name {
+  /* font-family: 'Gamja Flower', cursive; */
+  color: #61dafb;
+  font-size: calc(20px + 2vmin);
+}
+
+.pet-edit-delete {
+  font-size: 12px;
+}
+
+.pet-comments {
+
+}
