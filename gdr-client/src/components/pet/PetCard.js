@@ -17,7 +17,7 @@ const PetCard = ({ pet }) => {
         <div className="pet-info">
           <p className="pet-name">{ pet.attributes.name }</p>
           <p>{ pet.attributes.breed }</p>
-          <p>{ pet.attributes.birthdate }</p>
+          <p>Birthdate:<br />{ pet.attributes.birthdate ? pet.attributes.birthdate : "Unknown" }</p>
         </div>
       </div>
       <div className="pet-comments">
