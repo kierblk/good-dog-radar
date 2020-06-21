@@ -10,9 +10,11 @@ import NavBar from "./components/layout/NavBar";
 import Home from './components/layout/Home'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
+import Welcome from './components/layout/Welcome'
 
 import PetList from "./components/pet/PetList"
-import NewPet from './components/pet/NewPetForm'
+import NewPetFormWrapper from './components/pet/NewPetFormWrapper'
+import EditPetFormWrapper from './components/pet/EditPetFormWrapper'
 import PetCard from './components/pet/PetCard'
 
 import Login from './components/user/Login'
@@ -33,14 +35,19 @@ class App extends React.Component {
         <NavBar location={this.props.location} />
         <div className="gdr App-header">
           <Switch>
-            <Route exact path='/' render={ () => loggedIn ? '' : <Home /> } />
+            <Route exact path='/' render={ () => loggedIn ? <Welcome /> : <Home /> } />
             <Route exact path='/login' component={ Login } />
             <Route exact path='/signup' component={ Signup } />
             <Route exact path='/pets' component={ PetList } />
-            <Route exact path='/pets/new' component={ NewPet } />
+            <Route exact path='/pets/new' component={ NewPetFormWrapper } />
             <Route exact path='/pets/:id' render={ props => { 
                 const pet = pets.find(pet => pet.id === props.match.params.id)
                 return <PetCard pet={pet} {...props} />
+              }
+              }/>
+              <Route exact path='/pets/:id/edit' render={ props => { 
+                const pet = pets.find(pet => pet.id === props.match.params.id)
+                return <EditPetFormWrapper edit={true} pet={pet} {...props} />
               }
               }/>
           </Switch>
