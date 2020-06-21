@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import { updateNewPetForm } from '../../actions/newPetForm'
-import { createPet } from '../../actions/myPets'
+import { updatePetForm } from '../../actions/petForm'
 
-const NewPetForm = ({formData, updateNewPetForm, createPet, history}) => {
+const PetForm = ({formData, updatePetForm, handleSubmit, edit, history}) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -12,18 +11,15 @@ const NewPetForm = ({formData, updateNewPetForm, createPet, history}) => {
       ...formData,
       [name]: value
     }
-    updateNewPetForm(updatedFormInfo)
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    createPet(formData, history)
+    updatePetForm(updatedFormInfo)
   }
 
   return (
     <div>
-      <h2>Let's Add a New Pet</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={event => {
+        event.preventDefault()
+        handleSubmit(formData, history)
+      }}>
         <input 
           type="text"
           name="name"
@@ -52,7 +48,7 @@ const NewPetForm = ({formData, updateNewPetForm, createPet, history}) => {
           value={formData.photo} 
           placeholder="Photo URL" />
         <br />
-        <input type="submit" value="Add Pet"/>
+        <input type="submit" value={edit ? "Edit Pet" : "Create Pet"}/>
       </form>
     </div>
   );
@@ -60,8 +56,8 @@ const NewPetForm = ({formData, updateNewPetForm, createPet, history}) => {
 
 const mapStateToProps = (state) => {
   return {
-    formData: state.newPetForm
+    formData: state.petForm
   }
 }
 
-export default connect(mapStateToProps, { updateNewPetForm, createPet })(NewPetForm);
+export default connect(mapStateToProps, { updatePetForm })(PetForm);
